@@ -32,7 +32,7 @@
             <i class="nav-icon fas fa-th"></i>
             <p>
               Halaman Utama
-              <span class="right badge badge-danger">New</span>
+              <span class="right badge badge-danger">Home</span>
             </p>
           </a>
         </li>

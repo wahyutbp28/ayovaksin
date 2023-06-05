@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\jenisvaksin;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/master',function(){
-return view ('layout.master');
+Route::get('/dashboard', function () {
+    return view('layout.master');
 });
+
+
+// Route Jenis Vaksin
+Route::get('/jenisvaksin/tambah',function(){
+    return view('pages.jenisvaksin.tambah');
+});
+
+Route::get('/jenisvaksin', function(){
+    return view('pages.jenisvaksin.tampil');
+});
+
 //Nambah kOMEN AJAH
+
+Route::resource('jenisvaksin',jenisvaksin::class);
