@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="{{asset('/template/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('/template/dist/css/adminlte.min.css')}}">
+  @stack('styles')
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -43,8 +44,8 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active">@yield('judul')</li>
             </ol>
           </div>
         </div>
@@ -106,11 +107,9 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('/template/dist/js/demo.js')}}"></script>
 
-<script src="{{asset('/DataTables/js/datatables.min.js')}}"></script>
 
-<script>$(document).ready( function () {
-  $('#myTable').DataTable();
-} );</script>
+
+@stack('scripts')
 
 </body>
 </html>

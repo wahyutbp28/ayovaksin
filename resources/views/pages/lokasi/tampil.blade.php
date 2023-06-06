@@ -1,10 +1,10 @@
 @extends('layout.master')
 
 @section('judul')
-Halaman Jenis Vaksin
+Halaman Lokasi Vaksin
 @endsection
 
-@push('scripts')
+<@push('scripts')
 <script src="{{asset('/template/plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{asset('/template/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 <script>
@@ -22,26 +22,26 @@ Halaman Jenis Vaksin
 
 
 @section('content')
-<a href="/jenisvaksin/create" class="btn btn-primary my-3">Add</a>
+<a href="/lokasi/create" class="btn btn-primary my-3">Add</a>
 <table class="table table-hover" id="example1">
     <thead>
       <tr>
         <th scope="col">No</th>
-        <th scope="col">Jenis Vaksin</th>
+        <th scope="col">Lokasi Vaksin</th>
         <th scope="col">Action</th>
         
       </tr>
     </thead>
     <tbody>
-      @forelse($jenisvaksin as $key=>$val)
+      @forelse($lokasi as $key=>$val)
       <tr>
         <th scope="row">{{$key+1}}</th>
-        <td>{{$val->nama_vaksin}}</td>
+        <td>{{$val->lokasi}}</td>
         <td>
-          <form action="/jenisvaksin/{{$val->id}}" method ="POST">
+          <form action="/lokasi/{{$val->id}}" method ="POST">
             @csrf
             @method('delete')
-            <a href="/jenisvaksin/{{$val->id}}/edit" class ="btn btn-warning btn-sm">Edit</a>
+            <a href="/lokasi/{{$val->id}}/edit" class ="btn btn-warning btn-sm">Edit</a>
             <input type="submit" class="btn btn-danger btn-sm" value="Delete">
           </form>
 

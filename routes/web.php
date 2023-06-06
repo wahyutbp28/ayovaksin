@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jenisvaksin;
+use App\Http\Controllers\lokasi;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,4 @@ Route::get('/jenisvaksin', function(){
 //Nambah kOMEN AJAH
 
 Route::resource('jenisvaksin',jenisvaksin::class);
+Route::resource('lokasi',lokasi::class);
