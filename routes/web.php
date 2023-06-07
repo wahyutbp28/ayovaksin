@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\jenisvaksin;
 use App\Http\Controllers\lokasi;
+use App\Http\Controllers\dokter;
+use App\Http\Controllers\peserta;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +39,5 @@ Route::get('/jenisvaksin', function(){
 
 Route::resource('jenisvaksin',jenisvaksin::class);
 Route::resource('lokasi',lokasi::class);
+Route::resource('dokter',dokter::class);
+Route::resource('peserta',peserta::class);
